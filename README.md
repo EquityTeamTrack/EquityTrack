@@ -5,7 +5,7 @@
 
   **Una herramienta para detectar diferencias, revisar oportunidades y dar seguimiento a las decisiones.**
 
-  `Python` · `JavaScript` · `SQLite` · `Gemini`
+  `Python` · `JavaScript` · `SQLite` · `API Gemini`
 </div>
 
 ---

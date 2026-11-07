@@ -1,6 +1,6 @@
 # EquityTrack
 
-Aplicación de analítica laboral para equipos de Recursos Humanos. Esta carpeta es una copia independiente y organizada del proyecto; no modifica la versión publicada.
+Aplicación de analítica laboral para equipos de Recursos Humanos. 
 
 ## Abrir la aplicación con Python
 

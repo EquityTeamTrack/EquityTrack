@@ -1,6 +1,6 @@
 # EquityTrack
 
-Aplicación de analítica laboral para equipos de Recursos Humanos. 
+Aplicación de analítica laboral para equipos de Recursos Humanos. Esta carpeta es una copia independiente y organizada del proyecto; no modifica la versión publicada.
 
 ## Abrir la aplicación con Python
 
@@ -108,3 +108,32 @@ Los criterios iniciales se han sustituido por una propuesta adaptada de los art�
 `data/reference-framework.json` y el expediente incluyen las referencias de BOE, CCOO, UGT e INE. La diferencia del 15,74 % se calcula a partir de la ganancia media anual del INE de 2023: mujeres 25.591,31 € y hombres 30.372,49 €. Es un contexto nacional sin ajustar, no una tasa específica de tecnología ni una medida de mérito individual. La referencia sindical de UGT reproduce el mismo dato INE; no constituye una estimación independiente. No se aplican porcentajes nacionales a las valoraciones personales.
 
 La migración conserva aportaciones y decisiones previas en el historial, mantiene requisitos editados por RR. HH. y deja pendiente la revisión global. Las evidencias ficticias no se convierten en evidencias reales por añadir estas referencias.
+
+## Asistente de datos con Gemini
+
+El botón de conversación está abajo a la derecha. Usa la API REST oficial de Gemini a través del servidor Python. El código de integración está separado en `gemini_api.py`; el navegador nunca recibe la clave. No utiliza paquetes externos.
+
+### Activar la conexión
+
+1. Crea una clave de Gemini en https://aistudio.google.com/apikey.
+2. Copia `.env.example` como `.env` si no existe y completa `GEMINI_API_KEY=tu_clave`. En esta copia local ya existe un `.env` vacío.
+3. Reinicia Python con `python3 app.py --port 8091` y abre http://127.0.0.1:8091.
+4. Pulsa el icono de conversación y pregunta sobre los resultados.
+
+`GEMINI_MODEL` es configurable; por defecto se usa `gemini-2.5-flash`. También pueden configurarse ambas variables en el entorno, que tiene prioridad sobre `.env`.
+
+### Qué se comparte
+
+Solo al pulsar Enviar se transmiten a Google la pregunta, los últimos seis turnos de conversación y un resumen agregado de salarios, promociones y permisos del filtro actual. No se envían las filas individuales del CSV ni las evidencias, aportaciones o textos del expediente. Los grupos salariales y de promoción con menos de cinco personas por sexo no se incluyen. Para permisos se requieren al menos cinco trayectorias y cinco controles distintos. Las etiquetas de departamento/categoría sí forman parte del resumen. Evita información identificable en preguntas y etiquetas; los datos ficticios permiten probar el recorrido.
+
+El asistente explica los datos disponibles; no ejecuta acciones ni toma decisiones sobre personas. La conversación permanece solo en memoria del navegador y se borra al recargar o pulsar «Nueva conversación». El servidor no la guarda en SQLite. Google procesa las consultas según las condiciones de tu cuenta/API. La aplicación sigue siendo local, sin autenticación para un despliegue público.
+
+### Archivos para GitHub
+
+Sube `gemini_api.py`, `.env.example`, los archivos `src/chatbot.js` y `src/chatbot.css` y el resto del proyecto. **Nunca subas `.env` ni claves reales.** `.gitignore` los excluye. El ZIP entregado contiene la plantilla vacía, pero no el `.env` local. GitHub Pages no ejecuta el servidor Python ni esta integración.
+
+### Comprobaciones
+
+`python3 -m unittest discover -s tests -v` incluye pruebas de configuración, petición REST simulada, exclusión de campos personales, errores de cuota/permisos y bloqueo HTTP del archivo privado. Sin una clave válida no puede verificarse una respuesta real de Gemini; no se simula una respuesta en la interfaz.
+
+Documentación: https://ai.google.dev/gemini-api/docs/api-key y https://ai.google.dev/api/generate-content.

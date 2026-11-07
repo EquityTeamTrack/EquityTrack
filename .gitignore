@@ -4,3 +4,8 @@ node_modules/
 runtime/
 __pycache__/
 *.pyc
+
+# Credenciales privadas de Gemini
+.env
+.env.*
+!.env.example

@@ -22,12 +22,16 @@ class ServerTests(unittest.TestCase):
             base = 'http://127.0.0.1:' + str(server.server_port)
             try:
                 self.assertIn(b'EquityTrack', urlopen(base + '/').read())
+                self.assertFalse(json.load(urlopen(base + '/api/chat/status'))['configured'])
+                with self.assertRaises(HTTPError) as chat_error:
+                    urlopen(Request(base + '/api/chat', data=json.dumps({'message': 'Hola'}).encode(), headers={'Content-Type': 'application/json'}))
+                self.assertEqual(chat_error.exception.code, 503)
                 case = json.load(urlopen(base + '/api/opportunities'))
                 self.assertEqual(case['criteria'][2]['assessment']['code'], 'access')
                 payload = json.dumps({'kind': 'comment', 'actor': 'Profesional', 'description': 'Quiero contrastar la asignación.'}).encode()
                 result = json.load(urlopen(Request(base + '/api/opportunities', data=payload, headers={'Content-Type': 'application/json'})))
                 self.assertEqual(len(result['comments']), 1)
-                for path in ('/runtime/equitytrack.sqlite3', '/app.py', '/data/opportunities.json'):
+                for path in ('/runtime/equitytrack.sqlite3', '/app.py', '/data/opportunities.json', '/.env', '/.env.example', '/gemini_api.py'):
                     with self.assertRaises(HTTPError) as error:
                         urlopen(base + path)
                     self.assertEqual(error.exception.code, 404)

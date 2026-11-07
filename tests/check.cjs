@@ -44,3 +44,4 @@ vm.runInContext(
   `careerLoaded=true; careerConnected=true; page='opportunities'; render(); if(!$('content').innerHTML.includes('Organización y seguimiento del trabajo')) throw Error('expediente'); if(!$('content').innerHTML.includes('Conclusión de RR. HH.')) throw Error('conclusion humana'); console.log('OK: expediente de oportunidades renderizado con participación y seguimiento.');`,
   ctx,
 );
+vm.runInContext(`const summary=chatSummary(); if(summary.coverage.people!==192) throw Error('contexto del chat'); if(summary.pay.length!==12) throw Error('grupos salariales del chat'); if(JSON.stringify(summary).includes('EMP-')) throw Error('identificador individual compartido'); const originalData=data; data=data.slice(0,2); if(chatSummary().pay.length) throw Error('grupo pequeño compartido'); data=originalData; console.log('OK: contexto agregado del chatbot y exclusión de grupos pequeños.');`,ctx);

@@ -1,0 +1,129 @@
+{
+  "id": "career-001",
+  "person": "Profesional ET-042 · caso ficticio",
+  "role": "Desarrolladora · Ingeniería",
+  "current_level": "Mid",
+  "target_level": "Sénior",
+  "current_band": "40.000–52.000 € brutos/año",
+  "target_band": "52.000–68.000 € brutos/año",
+  "evaluation": "Revisión pendiente: contrastar funciones objetivo y oportunidades de organización del trabajo.",
+  "criteria": [
+    {
+      "id": "design",
+      "title": "Formación y conocimientos del puesto",
+      "requirement": "Acreditar conocimientos técnicos pertinentes y formación relacionada con las funciones objetivo.",
+      "evidence": [
+        {
+          "description": "Diseño del servicio de notificaciones; acta de revisión técnica disponible.",
+          "author": "Responsable",
+          "verified": true
+        }
+      ],
+      "opportunities": [
+        {
+          "description": "Diseñar el servicio de notificaciones",
+          "status": "completada",
+          "context": "Asignación registrada en el plan de proyecto."
+        }
+      ],
+      "source_reference": "Art. 11.1 y 11.3; art. 15, área 3.",
+      "source_url": "https://www.boe.es/eli/es/res/2025/04/04/(10)"
+    },
+    {
+      "id": "autonomy",
+      "title": "Autonomía e iniciativa",
+      "requirement": "Documentar el grado de autonomía e iniciativa en las funciones objetivo y el apoyo disponible.",
+      "evidence": [
+        {
+          "description": "Resolución de incidencias y mantenimiento del servicio durante el último trimestre.",
+          "author": "Profesional",
+          "verified": false
+        }
+      ],
+      "opportunities": [],
+      "source_reference": "Art. 15, grupo C, niveles 1–3.",
+      "source_url": "https://www.boe.es/eli/es/res/2025/04/04/(10)"
+    },
+    {
+      "id": "delivery",
+      "title": "Organización y seguimiento del trabajo",
+      "requirement": "Revisar la organización de actividades y la coordinación efectivamente requerida por el puesto objetivo.",
+      "evidence": [],
+      "opportunities": [
+        {
+          "description": "Solicitud para coordinar la entrega del nuevo buscador",
+          "status": "no_asignada",
+          "context": "Registro ficticio: la responsable confirmó que se asignó a otra persona por continuidad. Se mantuvieron tareas de apoyo y no se acordó una alternativa."
+        }
+      ],
+      "source_reference": "Art. 15, grupo C. Adaptación funcional; no exige dirigir personas a todo perfil técnico.",
+      "source_url": "https://www.boe.es/eli/es/res/2025/04/04/(10)"
+    },
+    {
+      "id": "mentoring",
+      "title": "Experiencia y contribuciones técnicas",
+      "requirement": "Contrastar experiencia y aportaciones relacionadas con las funciones objetivo, incluyendo mejoras o formación cuando sean pertinentes.",
+      "evidence": [],
+      "opportunities": [],
+      "source_reference": "Art. 11.1; art. 15, grupo C. La mentoría no es un requisito universal.",
+      "source_url": "https://www.boe.es/eli/es/res/2025/04/04/(10)"
+    }
+  ],
+  "contributions": [
+    {
+      "description": "Apoyo a incorporaciones y documentación de procedimientos",
+      "note": "Revisar su alcance y vínculo con los criterios; no etiquetar automáticamente como trabajo poco promocionable."
+    }
+  ],
+  "comments": [],
+  "actions": [],
+  "decision": "pendiente",
+  "decision_reason": "",
+  "history": [],
+  "reference_framework": {
+    "revision": "es-tic-2026-11-07",
+    "checked_at": "2026-11-07",
+    "scope": "Propuesta orientativa para desarrollo de software. RR. HH. debe confirmar convenio aplicable, funciones y criterios internos con la participación que corresponda a la representación laboral. Mid y Sénior no equivalen automáticamente a grupos del convenio.",
+    "criteria_note": "Adaptación de EquityTrack, no transcripción de una matriz oficial de ascensos. No se fijan años mínimos, número de proyectos ni puntuaciones nacionales.",
+    "sources": [
+      {
+        "title": "BOE · XIX Convenio TIC, arts. 11 y 15",
+        "url": "https://www.boe.es/eli/es/res/2025/04/04/(10)",
+        "use": "Promoción y clasificación profesional; área 3 y referencias funcionales del grupo C. Convenio firmado por CCOO-Servicios y FeSMC-UGT."
+      },
+      {
+        "title": "CCOO Servicios · Publicación del XIX Convenio TIC",
+        "url": "https://www.ccoo-servicios.es/html/62498.html",
+        "use": "Referencia sindical sobre el convenio y su vigencia 2025–2027."
+      },
+      {
+        "title": "UGT · Promoción profesional, 25/09/2026",
+        "url": "https://www.ugt.es/tu-jefea-no-puede-impedir-tu-promocion-profesional-sin-motivos-objetivos-y-legales",
+        "use": "Revisión de decisiones no arbitrarias y participación en procesos internos."
+      },
+      {
+        "title": "INE · Encuesta Anual de Estructura Salarial, 2023",
+        "url": "https://www.ine.es/dyngs/Prensa/EAES2023.htm",
+        "use": "Contexto nacional: 25.591,31 € de ganancia media anual de mujeres y 30.372,49 € de hombres; diferencia calculada del 15,74 %. No ajustada; todas las actividades de la encuesta, no solo tecnología."
+      },
+      {
+        "title": "UGT · Informe de brecha salarial, 2026",
+        "url": "https://www.ugt.es/ugt-presenta-el-informe-la-brecha-salarial-baja-la-desigualdad-no-desaparece",
+        "use": "Análisis sindical: recoge el 15,74 % de 2023. Usa la misma fuente INE; no es una segunda estimación independiente."
+      }
+    ],
+    "context": {
+      "year": 2023,
+      "women_annual_eur": 25591.31,
+      "men_annual_eur": 30372.49,
+      "gap_pct": 15.74,
+      "warning": "Media anual sin ajustar. No compara igual trabajo ni establece un umbral de promoción; no debe compararse directamente con la brecha normalizada por jornada de esta aplicación."
+    }
+  },
+  "reference_revision": "es-tic-2026-11-07",
+  "criteria_source": {
+    "document": "Propuesta adaptada del XIX Convenio TIC · arts. 11 y 15",
+    "version": "ES · revisión 07/11/2026 · pendiente de validación empresarial",
+    "defined_by": "EquityTrack propone; RR. HH. valida conforme al convenio y acuerdos aplicables"
+  }
+}

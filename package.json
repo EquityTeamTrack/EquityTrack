@@ -1,0 +1,11 @@
+{
+  "name": "equitytrack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Anal\u00edtica laboral para Recursos Humanos",
+  "scripts": {
+    "start": "python3 app.py",
+    "check": "node tests/check.cjs",
+    "check:python": "python3 -m unittest discover -s tests -v"
+  }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EquityTrack · Recursos Humanos</title>
+    <link rel="stylesheet" href="src/styles.css?v=spanish-basis-4" />
+    <script defer src="src/state.js?v=spanish-basis-4"></script>
+    <script defer src="src/analytics.js?v=spanish-basis-4"></script>
+    <script defer src="src/ui.js?v=spanish-basis-4"></script>
+    <script defer src="src/promotions.js?v=spanish-basis-4"></script>
+    <script defer src="src/tables.js?v=spanish-basis-4"></script>
+    <script defer src="src/data.js?v=spanish-basis-4"></script>
+    <script defer src="src/actions.js?v=spanish-basis-4"></script>
+    <script defer src="src/reports.js?v=spanish-basis-4"></script>
+    <script defer src="src/opportunities.js?v=spanish-basis-4"></script>
+    <script defer src="src/app.js?v=spanish-basis-4"></script>
+  </head>
+  <body>
+    <aside>
+      <div class="brand">
+        <img src="assets/logo.jpg" alt="EquityTrack" width="200" height="52" />
+      </div>
+      <nav id="nav" aria-label="Menú principal"></nav>
+      <footer>EquityTrack<br />Espacio de Recursos Humanos</footer>
+    </aside>
+    <a class="skip" href="#content">Ir al contenido</a>
+    <main>
+      <header>
+        <span><b id="orgLabel">NovaTech</b></span>
+        <div class="row"><span class="avatar">RH</span></div>
+      </header>
+      <div class="workspace">
+        <div class="row no-print">
+          <div>
+            <div class="eyebrow">Tu espacio de Recursos Humanos</div>
+            <h1 id="title"></h1>
+            <p class="muted" id="subtitle"></p>
+          </div>
+          <div>
+            <label for="department">Departamento</label
+            ><select id="department"></select>
+          </div>
+        </div>
+        <div id="content" aria-live="polite"></div>
+        <div class="source">EquityTrack · Analítica de equidad laboral</div>
+      </div>
+    </main>
+    <dialog id="modal"></dialog>
+    <div id="toast" class="toast" hidden></div>
+  </body>
+</html>

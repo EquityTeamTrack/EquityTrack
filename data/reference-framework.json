@@ -1,0 +1,40 @@
+{
+  "revision": "es-tic-2026-11-07",
+  "checked_at": "2026-11-07",
+  "scope": "Propuesta orientativa para desarrollo de software. RR. HH. debe confirmar convenio aplicable, funciones y criterios internos con la participación que corresponda a la representación laboral. Mid y Sénior no equivalen automáticamente a grupos del convenio.",
+  "criteria_note": "Adaptación de EquityTrack, no transcripción de una matriz oficial de ascensos. No se fijan años mínimos, número de proyectos ni puntuaciones nacionales.",
+  "sources": [
+    {
+      "title": "BOE · XIX Convenio TIC, arts. 11 y 15",
+      "url": "https://www.boe.es/eli/es/res/2025/04/04/(10)",
+      "use": "Promoción y clasificación profesional; área 3 y referencias funcionales del grupo C. Convenio firmado por CCOO-Servicios y FeSMC-UGT."
+    },
+    {
+      "title": "CCOO Servicios · Publicación del XIX Convenio TIC",
+      "url": "https://www.ccoo-servicios.es/html/62498.html",
+      "use": "Referencia sindical sobre el convenio y su vigencia 2025–2027."
+    },
+    {
+      "title": "UGT · Promoción profesional, 25/09/2026",
+      "url": "https://www.ugt.es/tu-jefea-no-puede-impedir-tu-promocion-profesional-sin-motivos-objetivos-y-legales",
+      "use": "Revisión de decisiones no arbitrarias y participación en procesos internos."
+    },
+    {
+      "title": "INE · Encuesta Anual de Estructura Salarial, 2023",
+      "url": "https://www.ine.es/dyngs/Prensa/EAES2023.htm",
+      "use": "Contexto nacional: 25.591,31 € de ganancia media anual de mujeres y 30.372,49 € de hombres; diferencia calculada del 15,74 %. No ajustada; todas las actividades de la encuesta, no solo tecnología."
+    },
+    {
+      "title": "UGT · Informe de brecha salarial, 2026",
+      "url": "https://www.ugt.es/ugt-presenta-el-informe-la-brecha-salarial-baja-la-desigualdad-no-desaparece",
+      "use": "Análisis sindical: recoge el 15,74 % de 2023. Usa la misma fuente INE; no es una segunda estimación independiente."
+    }
+  ],
+  "context": {
+    "year": 2023,
+    "women_annual_eur": 25591.31,
+    "men_annual_eur": 30372.49,
+    "gap_pct": 15.74,
+    "warning": "Media anual sin ajustar. No compara igual trabajo ni establece un umbral de promoción; no debe compararse directamente con la brecha normalizada por jornada de esta aplicación."
+  }
+}
